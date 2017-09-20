@@ -193,67 +193,72 @@
         <h2>5.数据类型的常用操作方法</h2><br>
           <p>&nbsp&nbsp&nbsp&nbsp列表：
           <code>
-            list.append()追加  
-            list.copy()浅复制  
-            list.count(1)列表中1的个数  
-            list.extend()扩展，参数为可迭代如list tuple dict，同append区分
-            list.insert()可指定位置插入元素  
-            list.index()在指定位置或范围返回第一次出现参数位置  
-            list.pop()删除最后元素并返回删除值  
-            list.remove()删除指定元素 
-            list.reserve()反序排列   
+            list.append()追加  <br>
+            list.copy()浅复制  <br>
+            list.count(1)列表中1的个数  <br>
+            list.extend()扩展，参数为可迭代如list tuple dict，同append区分<br>
+            list.insert()可指定位置插入元素  <br>
+            list.index()在指定位置或范围返回第一次出现参数位置  <br>
+            list.pop()删除最后元素并返回删除值  <br>
+            list.remove()删除指定元素 <br>
+            list.reserve()反序排列   <br>
             list.sort()正/逆序排列</p><br>            
           </code>
 
           <p>元组：
           <code>
-            tuple.count()  
-            tuple.index()  
-            tuple.copy()浅复制</p><br>            
+            tuple.count()  <br>
+            tuple.index()  <br>
+            tuple.copy()浅复制</p><br>  <br>          
           </code>
 
           <p>字符串：
           <code>
-            str.count()同list  
-            str.endwith('a')/.startwith('a')#判断开头、结尾字符  
-            str.find('a')/.index('a')#查找指定字符，如果没有，二者返回结果的区别  str.isalpha()/.isdigit()#判断是否是字母/数值  
-            str.upper()/.lower()转大/小写  
-            str.replace('a','b',1)#b替换a,1次   
+            str.count()同list  <br>
+            str.endwith('a')/.startwith('a')#判断开头、结尾字符  <br>
+            str.find('a')/.index('a')#查找指定字符，如果没有，二者返回结果的区别<br>
+            str.isalpha()/.isdigit()#判断是否是字母/数值  <br>
+            str.upper()/.lower()转大/小写  <br>
+            str.replace('a','b',1)#b替换a,1次   <br>
             str.split()指定字符分割</p><br>            
           </code>
 
           <p>字典：
           <code>
-            dict.items()返回键和键值的列表，
-            dict.values()返回所有键值的列表  
-            dict.keys()返回所有键的列表  
-            dict.get(s,10),s是否在字典中，是返回1，否返回10  
+            dict.items()返回键和键值的列表 <br>
+            dict.values()返回所有键值的列表  <br>
+            dict.keys()返回所有键的列表  <br>
+            dict.get(s,10),s是否在字典中，是返回1，否返回10  <br>
             dict.update()更新键对应的值，没有则新建</p><br>            
           </code>
 
         <h2>6.控制流程</h2><br>
           <p>&nbsp&nbsp&nbsp&nbsp（1）if条件语句：</p><br>
             <code>
-              if 条件1:
-                执行语句
-              elif 条件2：
-                执行语句
-              else:
-                执行语句
+              if 条件1:<br>
+                执行语句<br>
+              elif 条件2：<br>
+                执行语句<br>
+              else:<br>
+                执行语句<br>
             </code>
           <p>&nbsp&nbsp&nbsp&nbsp（2）while循环：</p><br>
             <code>
-              while True:
-                执行语句
-                中止条件（如果没有中止条件，那么该循环是个死循环）
+              while True:<br>
+                执行语句<br>
+                中止条件（如果没有中止条件，那么该循环是个死循环）<br>
             </code>
           <p>&nbsp&nbsp&nbsp&nbsp（3）for循环</p><br>
             <code>
-              for 条件：
-                执行语句（for遍历结束，循环结束）
+              for 条件：<br>
+                执行语句（for遍历结束，循环结束）<br>
             </code>
         <h2>7.函数</h2><br>
           <p>&nbsp&nbsp&nbsp&nbsp（1）基本结构：</p><br>
+            <code>
+                def fun():<br>
+                    语句 <br>
+            </code>
           <p>&nbsp&nbsp&nbsp&nbsp（2）函数参数：</p><br>
             <p>&nbsp&nbsp&nbsp&nbsp形参与实参：形参是函数体括号内的参数形式，实参是调用函数传给函数的实际参数值<br>
               &nbsp&nbsp&nbsp&nbsp固定参数：def fun(a,b=1):#两个参数，a为固定参数<br>
@@ -361,28 +366,28 @@
           <code>time.localtime()#返回当前时间的年，月，日，时，分，秒，等信息</code><br>
           <p>&nbsp&nbsp&nbsp&nbsp格式化输出时间：</p><br>
           <code>  "
-                  >>> time.asctime( time.localtime(time.time())) 
-                    'Wed Sep 20 14:03:47 2017'
-                  >>> time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
-                    '2017-09-20 14:04:20'
+                  >>> time.asctime( time.localtime(time.time())) <br>
+                    'Wed Sep 20 14:03:47 2017'<br>
+                  >>> time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())<br>
+                    '2017-09-20 14:04:20'<br>
                   "
           </code><br>
         <h2>11.异常处理</h2><br>
           <code>
-            try:
-                suite1        #测试语句块
-            except exception1:
-                suite2        #如果测试语句suite1中发生exception1异常时执行
-            except (exception2,exception3):
-                suite3       #如果测试语句suite1中发生元组中任意异常时执行
-            except exception4 as e:    #as把异常的原因赋值给e
-                suite4       #如果测试语句suite1发生exception4的异常时执行
-            except:
-                suite5      #如果测试语句suite1发生异常在所列出的异常之外时执行
-            else:
-                suite5      #如果测试语句块suite1中没有发生异常时执行
-            finally:
-                suit6      #不管测试语句suite1中又没有发生异常都会执行            
+            try:<br>
+&nbsp&nbsp  suite1        #测试语句块<br>
+            except exception1:<br>
+&nbsp&nbsp  suite2        #如果测试语句suite1中发生exception1异常时执行<br>
+            except (exception2,exception3):<br>
+&nbsp&nbsp  suite3       #如果测试语句suite1中发生元组中任意异常时执行<br>
+            except exception4 as e:    #as把异常的原因赋值给e<br>
+&nbsp&nbsp  suite4       #如果测试语句suite1发生exception4的异常时执行<br>
+            except:<br>
+&nbsp&nbsp  suite5      #如果测试语句suite1发生异常在所列出的异常之外时执行<br>
+            else:<br>
+&nbsp&nbsp  suite5      #如果测试语句块suite1中没有发生异常时执行<br>
+            finally:<br>
+&nbsp&nbsp  suit6      #不管测试语句suite1中又没有发生异常都会执行        <br>    
           </code>
           <p>&nbsp&nbsp&nbsp&nbsp注意：中间的except，else，finally都是可选的<br>
           各类异常参考该网址：http://www.runoob.com/python/python-exceptions.html</p><br>
